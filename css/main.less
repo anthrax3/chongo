@@ -1,0 +1,121 @@
+// main.less
+// - -
+
+
+// Reset
+@import "css/normalize.less";
+
+// Variables & mixins
+@import "css/variables.less";
+@import "css/mixins.less";
+
+// notes:
+// + wonder if it's possible to pack everything into mixins.less? aim being that you'd invoke funcs that generate the required rules (like how grids are made)
+
+// Fonts
+#font > .add(glyph, normal);
+#font > .add(ProximaNova, regular);
+#font > .add(ProximaNova, bold);
+#font > .add(ProximaNova, black);
+#font > .add(ProximaNovaCondensed, regular);
+#font > .add(ProximaNovaCondensed, semibold);
+#font > .add(ProximaNovaCondensed, bold);
+#font > .add(ProximaNovaCondensed, extrabold);
+
+// Animations
+//	Usage:
+//	+ full: #animation > .use(<animation specs - e.g. bounce 0.25s ease-in-out infinite alternate>);
+#animation > .add(bounce);
+
+// Grid system
+#grid > .create(@totalColumns, @pageWidth, @gutterWidth);
+
+// Type - - - - - - - - - - - - - - - - -
+//	Usage:
+//	+ full: #font > .use(<stack - e.g. glyph, regular or condensed>, <weight - e.g. normal, reqular, semibold, bold, extrabold, or black>, <size - e.g. 14px>);
+//	+ stack: #font > #stack > .use(<stack name - e.g. regular>);
+//	+ weight: #font > #weight > .use(<weight name - e.g. bold>);
+//	+ size (relative): #font > #size > .use(<target size - e.g. 48>, <context - e.g. 16>);
+//	+ size (fixed): #font > #size > .use(<size in px - e.g. 48px>);
+h1, h2, h3, h4, h5, h6 {
+	margin:0;
+	text-rendering: optimizelegibility;
+}
+h1 {
+	#font > .use(condensed, black, 44px);
+	color: @black;
+	line-height: @baseLineHeight;
+}
+h2 {
+
+}
+h3 {
+	#font > .use(condensed, regular, 18px);
+	color:@black;
+}
+h4 {
+	#font > .use(regular, bold, 18px);
+}
+p {
+	#font > .use(condensed, regular, 14px);
+	color: @gray;
+	line-height: @baseLineHeight * 1.5;
+}
+a {
+	#font > #weight > .use(bold);
+	color: @link;
+	text-decoration: none;
+}
+a:hover {
+	color: @linkHover;
+}
+a:active {
+	color: @linkActive;
+}
+
+.glyphs {
+	#font > .use(glyph, bold, 48px); // fix the arity test in mixins.less
+}
+// Buttons
+
+// Nav, Header, Footer
+
+// Post
+
+// States
+/*
+	is-<foo> where foo is some state. states should only be used in conjunction with another class (e.g. ".nav-item.is-active")
+	- -
+	.is-hidden
+	.is-visible
+	.is-on
+	.is-off
+	.is-loading
+	.is-transitioning
+	.is-error
+	.is-warning
+	.is-ok
+	.is-info (?)
+	.is-fixed
+	.is-active
+	.is-inactive
+	.is-disabled
+	.is-valid
+	.is-invalid
+*/
+
+// In Progress
+.show {
+	> * { margin-bottom: 10px; }
+	.columns {
+		background:#eee;
+		background:rgba(0,0,0,0.1);
+		border-radius: 5px;
+		padding:5px;
+
+		.columns {
+			background: #ddd;
+			background:rgba(0,0,0,0.1);
+		}
+	}
+}
