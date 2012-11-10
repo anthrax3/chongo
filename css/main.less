@@ -38,7 +38,7 @@
 //	+ size (relative): #font > #size > .use(<target size - e.g. 48>, <context - e.g. 16>);
 //	+ size (fixed): #font > #size > .use(<size in px - e.g. 48px>);
 h1, h2, h3, h4, h5, h6 {
-	margin:0;
+	margin:@gutterWidth 0;
 	text-rendering: optimizelegibility;
 }
 h1 {
@@ -106,14 +106,16 @@ a:active {
 
 // In Progress
 .show {
-	> * { margin-bottom: 10px; }
-	.columns {
+	.col,
+	.cols {
+		margin-bottom: 10px;
 		background:#eee;
 		background:rgba(0,0,0,0.1);
-		border-radius: 5px;
-		padding:5px;
+		border: 1px solid rgba(0,0,0,0.1);
 
-		.columns {
+		.col,
+		.cols {
+			margin-bottom: 0;
 			background: #ddd;
 			background:rgba(0,0,0,0.1);
 		}
