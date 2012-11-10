@@ -50,11 +50,11 @@
 
 #grid {
 	.setColumn(@columnCount, @totalColumns, @pageWidth, @gutterWidth){
-		width: ((100% / @totalColumns)  * @columnCount) - percentage((@gutterWidth / @pageWidth) * 2);
+		width: ((100% / @totalColumns)  * @columnCount);
 		position: relative;
 	}
 	.create(@totalColumns: 12, @pageWidth: 960px, @gutterWidth: 10px){
-		* {
+		*, *:after, *:before {
 			-moz-box-sizing: border-box;
 			-webkit-box-sizing: border-box;
 			box-sizing: border-box;
@@ -70,12 +70,12 @@
 			position: relative;
 			.clearfix();
 		}
-		[class*="column"] + [class*="column"]:last-child { float: right; } /* hide rounding errors */
-		.column, .columns {
+		.col, .cols {
 			float:left;
-			//padding: percentage( (@gutterWidth / @pageWidth) );
-			margin-right: percentage( (@gutterWidth / @pageWidth) );
-			margin-left: percentage( (@gutterWidth / @pageWidth) );
+
+			&.pad {
+				padding: @gutterWidth;
+			}
 		}
 		.one    { #grid > .setColumn(1, @totalColumns, @pageWidth, @gutterWidth) }
 		.two    { #grid > .setColumn(2, @totalColumns, @pageWidth, @gutterWidth) }
