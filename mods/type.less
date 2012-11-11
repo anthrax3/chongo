@@ -1,0 +1,38 @@
+// Type ///////////////////////////////////////////////////////////////////////
+body {
+	#font > .use(sans, normal);
+}
+h1, h2, h3, h4, h5, h6 {
+	text-rendering: optimizelegibility;
+	margin: @gutterHeight 0;
+	//padding: 0;
+}
+h1 {
+	#font > .use(sans, bold, @baseFontSize * 3);
+}
+h2 {
+	#font > .use(sans, bold, @baseFontSize * 2);
+}
+h3 {
+	#font > .use(condensed, regular, 18px);
+	color:@black;
+}
+h4 {
+	#font > .use(regular, bold, 18px);
+}
+p {
+	#font > .use(condensed, regular, 14px);
+	color: @gray;
+	line-height: @baseLineHeight * 1.5;
+}
+a {
+	#font > #weight > .use(bold);
+	color: @link;
+	text-decoration: none;
+}
+a:hover {
+	color: @linkHover;
+}
+a:active {
+	color: @linkActive;
+}
