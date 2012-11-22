@@ -4,7 +4,7 @@
 @import "mods/type.less";
 @import "mods/lists.less";
 @import "mods/assets.less";
-@import "mods/icons.less";
+@import "mods/font-awesome.less";
 @import "mods/states.less";
 
 
@@ -12,14 +12,14 @@
 // + wonder if it's possible to pack everything into mixins.less? aim being that you'd invoke funcs that generate the required rules (like how grids are made)
 
 // Fonts
-#font > .add(icon, normal);
-#font > .add(ProximaNova, regular);
-#font > .add(ProximaNova, bold);
-#font > .add(ProximaNova, black);
-#font > .add(ProximaNovaCondensed, regular);
-#font > .add(ProximaNovaCondensed, semibold);
-#font > .add(ProximaNovaCondensed, bold);
-#font > .add(ProximaNovaCondensed, extrabold);
+// #font > .add(icon, normal);
+// #font > .add(ProximaNova, regular);
+// #font > .add(ProximaNova, bold);
+// #font > .add(ProximaNova, black);
+// #font > .add(ProximaNovaCondensed, regular);
+// #font > .add(ProximaNovaCondensed, semibold);
+// #font > .add(ProximaNovaCondensed, bold);
+// #font > .add(ProximaNovaCondensed, extrabold);
 
 // Animations
 //	Usage:
@@ -27,7 +27,7 @@
 #animation > .add(bounce);
 
 // Grid system
-#grid > .create(@totalColumns, @pageWidth, @gutterWidth);
+#grid > .create(@totalColumns, @pageWidth, @gutter);
 
 // Buttons
 

@@ -1,34 +1,34 @@
 // Generl Utilities (via Twitter Bootstrap) ///////////////////////////////////
 .clearfix {
-	*zoom: 1;
+    *zoom: 1;
 
-	&:before,
-	&:after {
-		display: table;
-		content: "";
-	}
-	&:after {
-		clear: both;
-	}
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
 }
 
 .tab-focus() {
-	// Default
-	outline: thin dotted #333;
-	// Webkit
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+    // Default
+    outline: thin dotted #333;
+    // Webkit
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
 }
 
 .center-block() {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ie7-inline-block() {
-	*display: inline; /* IE7 inline-block hack */
-	*zoom: 1;
+    *display: inline; /* IE7 inline-block hack */
+    *zoom: 1;
 }
 
 // IE7 likes to collapse whitespace on either side of the inline-block elements.
@@ -38,184 +38,184 @@
 // mean that space between those elements will be .6em (~2 space characters) in IE7,
 // instead of the 1 space in other browsers.
 .ie7-restore-left-whitespace() {
-	*margin-left: .3em;
+    *margin-left: .3em;
 
-	&:first-child {
-		*margin-left: 0;
-	}
+    &:first-child {
+        *margin-left: 0;
+    }
 }
 
 .ie7-restore-right-whitespace() {
-	*margin-right: .3em;
+    *margin-right: .3em;
 
-	&:last-child {
-		*margin-left: 0;
-	}
+    &:last-child {
+        *margin-left: 0;
+    }
 }
 
 .size(@height: 5px, @width: 5px) {
-	width: @width;
-	height: @height;
+    width: @width;
+    height: @height;
 }
 
 .square(@size: 5px) {
-	.size(@size, @size);
+    .size(@size, @size);
 }
 
 .placeholder(@color: @placeholderText) {
-	:-moz-placeholder {
-		color: @color;
-	}
-	::-webkit-input-placeholder {
-		color: @color;
-	}
+    :-moz-placeholder {
+        color: @color;
+    }
+    ::-webkit-input-placeholder {
+        color: @color;
+    }
 }
 
 /* Requires inline-block or block for proper styling */
 .text-overflow() {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* New image replacement (via http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ ) */
 .hide-text {
-	overflow: hidden;
-	text-indent: 100%;
-	white-space: nowrap;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
 }
 
 // CSS3 Properties (via Twitter Bootstrap) ////////////////////////////////////
 /* Border Radius */
 .border-radius(@radius) {
-	-webkit-border-radius: @radius;
-	-moz-border-radius: @radius;
-	border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
 }
 
 /* Single Corner Border Radius */
 .border-top-left-radius(@radius) {
-	-webkit-border-top-left-radius: @radius;
-	-moz-border-radius-topleft: @radius;
-	border-top-left-radius: @radius;
+    -webkit-border-top-left-radius: @radius;
+    -moz-border-radius-topleft: @radius;
+    border-top-left-radius: @radius;
 }
 .border-top-right-radius(@radius) {
-	-webkit-border-top-right-radius: @radius;
-	-moz-border-radius-topright: @radius;
-	border-top-right-radius: @radius;
+    -webkit-border-top-right-radius: @radius;
+    -moz-border-radius-topright: @radius;
+    border-top-right-radius: @radius;
 }
 .border-bottom-right-radius(@radius) {
-	-webkit-border-bottom-right-radius: @radius;
-	-moz-border-radius-bottomright: @radius;
-	border-bottom-right-radius: @radius;
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-radius-bottomright: @radius;
+    border-bottom-right-radius: @radius;
 }
 .border-bottom-left-radius(@radius) {
-	-webkit-border-bottom-left-radius: @radius;
-	-moz-border-radius-bottomleft: @radius;
-	border-bottom-left-radius: @radius;
+    -webkit-border-bottom-left-radius: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    border-bottom-left-radius: @radius;
 }
 
 /* Single Side Border Radius */
 .border-top-radius(@radius) {
-	.border-top-right-radius(@radius);
-	.border-top-left-radius(@radius);
+    .border-top-right-radius(@radius);
+    .border-top-left-radius(@radius);
 }
 .border-right-radius(@radius) {
-	.border-top-right-radius(@radius);
-	.border-bottom-right-radius(@radius);
+    .border-top-right-radius(@radius);
+    .border-bottom-right-radius(@radius);
 }
 .border-bottom-radius(@radius) {
-	.border-bottom-right-radius(@radius);
-	.border-bottom-left-radius(@radius);
+    .border-bottom-right-radius(@radius);
+    .border-bottom-left-radius(@radius);
 }
 .border-left-radius(@radius) {
-	.border-top-left-radius(@radius);
-	.border-bottom-left-radius(@radius);
+    .border-top-left-radius(@radius);
+    .border-bottom-left-radius(@radius);
 }
 
 /* Drop shadows */
 .box-shadow(@shadow) {
-	-webkit-box-shadow: @shadow;
-	-moz-box-shadow: @shadow;
-	box-shadow: @shadow;
+    -webkit-box-shadow: @shadow;
+    -moz-box-shadow: @shadow;
+    box-shadow: @shadow;
 }
 
 /* Transitions */
 .transition(@transition) {
-	-webkit-transition: @transition;
-	-moz-transition: @transition;
-	-o-transition: @transition;
-	transition: @transition;
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
 }
 .transition-delay(@transition-delay) {
-	-webkit-transition-delay: @transition-delay;
-	-moz-transition-delay: @transition-delay;
-	-o-transition-delay: @transition-delay;
-	transition-delay: @transition-delay;
+    -webkit-transition-delay: @transition-delay;
+    -moz-transition-delay: @transition-delay;
+    -o-transition-delay: @transition-delay;
+    transition-delay: @transition-delay;
 }
 
 /* Transformations */
 .transform-style(@value){
-	-webkit-transform-style: @value;
-	-moz-transform-style: @value;
-	-o-transform-style: @value;
-	transform-style: @value;
+    -webkit-transform-style: @value;
+    -moz-transform-style: @value;
+    -o-transform-style: @value;
+    transform-style: @value;
 }
 .perspective(@depth){
-	-webkit-perspective: @depth;
-	-moz-perspective: @depth;
-	-ms-perspective: @depth;
-	-o-perspective: @depth;
-	perspective: @depth;
+    -webkit-perspective: @depth;
+    -moz-perspective: @depth;
+    -ms-perspective: @depth;
+    -o-perspective: @depth;
+    perspective: @depth;
 }
 .rotate(@degrees) {
-	-webkit-transform: rotate(@degrees);
-	-moz-transform: rotate(@degrees);
-	-ms-transform: rotate(@degrees);
-	-o-transform: rotate(@degrees);
-	transform: rotate(@degrees);
+    -webkit-transform: rotate(@degrees);
+    -moz-transform: rotate(@degrees);
+    -ms-transform: rotate(@degrees);
+    -o-transform: rotate(@degrees);
+    transform: rotate(@degrees);
 }
 .rotateY(@degrees) {
-	-webkit-transform: rotateY(@degrees);
-	-moz-transform: rotateY(@degrees);
-	-ms-transform: rotateY(@degrees);
-	-o-transform: rotateY(@degrees);
-	transform: rotateY(@degrees);
+    -webkit-transform: rotateY(@degrees);
+    -moz-transform: rotateY(@degrees);
+    -ms-transform: rotateY(@degrees);
+    -o-transform: rotateY(@degrees);
+    transform: rotateY(@degrees);
 }
 .rotateX(@degrees) {
-	-webkit-transform: rotateX(@degrees);
-	-moz-transform: rotateX(@degrees);
-	-ms-transform: rotateX(@degrees);
-	-o-transform: rotateX(@degrees);
-	transform: rotateX(@degrees);
+    -webkit-transform: rotateX(@degrees);
+    -moz-transform: rotateX(@degrees);
+    -ms-transform: rotateX(@degrees);
+    -o-transform: rotateX(@degrees);
+    transform: rotateX(@degrees);
 }
 .scale(@ratio) {
-	-webkit-transform: scale(@ratio);
-	-moz-transform: scale(@ratio);
-	-ms-transform: scale(@ratio);
-	-o-transform: scale(@ratio);
-	transform: scale(@ratio);
+    -webkit-transform: scale(@ratio);
+    -moz-transform: scale(@ratio);
+    -ms-transform: scale(@ratio);
+    -o-transform: scale(@ratio);
+    transform: scale(@ratio);
 }
 .translate(@x, @y) {
-	-webkit-transform: translate(@x, @y);
-	-moz-transform: translate(@x, @y);
-	-ms-transform: translate(@x, @y);
-	-o-transform: translate(@x, @y);
-	transform: translate(@x, @y);
+    -webkit-transform: translate(@x, @y);
+    -moz-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+    transform: translate(@x, @y);
 }
 .skew(@x, @y) {
-	-webkit-transform: skew(@x, @y);
-	-moz-transform: skew(@x, @y);
-	-ms-transform: skewX(@x) skewY(@y); // See https://github.com/twitter/bootstrap/issues/4885
-	-o-transform: skew(@x, @y);
-	transform: skew(@x, @y);
-	-webkit-backface-visibility: hidden; // See https://github.com/twitter/bootstrap/issues/5319
+    -webkit-transform: skew(@x, @y);
+    -moz-transform: skew(@x, @y);
+    -ms-transform: skewX(@x) skewY(@y); // See https://github.com/twitter/bootstrap/issues/4885
+    -o-transform: skew(@x, @y);
+    transform: skew(@x, @y);
+    -webkit-backface-visibility: hidden; // See https://github.com/twitter/bootstrap/issues/5319
 }
 .translate3d(@x, @y, @z) {
-	-webkit-transform: translate3d(@x, @y, @z);
-	-moz-transform: translate3d(@x, @y, @z);
-	-o-transform: translate3d(@x, @y, @z);
-	transform: translate3d(@x, @y, @z);
+    -webkit-transform: translate3d(@x, @y, @z);
+    -moz-transform: translate3d(@x, @y, @z);
+    -o-transform: translate3d(@x, @y, @z);
+    transform: translate3d(@x, @y, @z);
 }
 
 /*
@@ -225,9 +225,9 @@ Default value is `visible`, but can be changed to `hidden
 See git pull https://github.com/dannykeane/bootstrap.git backface-visibility for examples
  */
 .backface-visibility(@visibility){
-	-webkit-backface-visibility: @visibility;
-	-moz-backface-visibility: @visibility;
-	backface-visibility: @visibility;
+    -webkit-backface-visibility: @visibility;
+    -moz-backface-visibility: @visibility;
+    backface-visibility: @visibility;
 }
 
 /*
@@ -235,25 +235,25 @@ Background clipping
 Heads up: FF 3.6 and under need "padding" instead of "padding-box"
  */
 .background-clip(@clip) {
-	-webkit-background-clip: @clip;
-	-moz-background-clip: @clip;
-	background-clip: @clip;
+    -webkit-background-clip: @clip;
+    -moz-background-clip: @clip;
+    background-clip: @clip;
 }
 
 /* Background sizing */
 .background-size(@size) {
-	-webkit-background-size: @size;
-	-moz-background-size: @size;
-	-o-background-size: @size;
-	background-size: @size;
+    -webkit-background-size: @size;
+    -moz-background-size: @size;
+    -o-background-size: @size;
+    background-size: @size;
 }
 
 
 /* Box sizing */
 .box-sizing(@boxmodel) {
-	-webkit-box-sizing: @boxmodel;
-	-moz-box-sizing: @boxmodel;
-	box-sizing: @boxmodel;
+    -webkit-box-sizing: @boxmodel;
+    -moz-box-sizing: @boxmodel;
+    box-sizing: @boxmodel;
 }
 
 /*
@@ -261,43 +261,43 @@ User select
 For selecting text on the page
  */
 .user-select(@select) {
-	-webkit-user-select: @select;
-	-moz-user-select: @select;
-	-ms-user-select: @select;
-	-o-user-select: @select;
-	user-select: @select;
+    -webkit-user-select: @select;
+    -moz-user-select: @select;
+    -ms-user-select: @select;
+    -o-user-select: @select;
+    user-select: @select;
 }
 
 /* Resize anything */
 .resizable(@direction) {
-	resize: @direction; // Options: horizontal, vertical, both
-	overflow: auto; // Safari fix
+    resize: @direction; // Options: horizontal, vertical, both
+    overflow: auto; // Safari fix
 }
 
 /* CSS3 Content Columns */
 .content-columns(@columnCount, @columnGap: @gridGutterWidth) {
-	-webkit-column-count: @columnCount;
-	-moz-column-count: @columnCount;
-	column-count: @columnCount;
-	-webkit-column-gap: @columnGap;
-	-moz-column-gap: @columnGap;
-	column-gap: @columnGap;
+    -webkit-column-count: @columnCount;
+    -moz-column-count: @columnCount;
+    column-count: @columnCount;
+    -webkit-column-gap: @columnGap;
+    -moz-column-gap: @columnGap;
+    column-gap: @columnGap;
 }
 
 /* Optional hyphenation */
 .hyphens(@mode: auto) {
-	word-wrap: break-word;
-	-webkit-hyphens: @mode;
-	-moz-hyphens: @mode;
-	-ms-hyphens: @mode;
-	-o-hyphens: @mode;
-	hyphens: @mode;
+    word-wrap: break-word;
+    -webkit-hyphens: @mode;
+    -moz-hyphens: @mode;
+    -ms-hyphens: @mode;
+    -o-hyphens: @mode;
+    hyphens: @mode;
 }
 
 /* Opacity */
 .opacity(@opacity) {
-	opacity: @opacity / 100;
-	filter: ~"alpha(opacity=@{opacity})";
+    opacity: @opacity / 100;
+    filter: ~"alpha(opacity=@{opacity})";
 }
 
 // Backgrounds ////////////////////////////////////////////////////////////////
@@ -305,173 +305,177 @@ For selecting text on the page
 Add an alphatransparency value to any background or border color (via Elyse Holladay)
  */
 #translucent {
-	.background(@color: @white, @alpha: 1) {
-		background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
-	}
-	.border(@color: @white, @alpha: 1) {
-		border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
-		.background-clip(padding-box);
-	}
+    .background(@color: @white, @alpha: 1) {
+        background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+    }
+    .border(@color: @white, @alpha: 1) {
+        border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+        .background-clip(padding-box);
+    }
 }
 
 /* Gradient Bar Colors for buttons and alerts */
 .gradientBar(@primaryColor, @secondaryColor) {
-	#gradient > .vertical(@primaryColor, @secondaryColor);
-	border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
-	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+    #gradient > .vertical(@primaryColor, @secondaryColor);
+    border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
+    border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
 }
 
 // Gradients //////////////////////////////////////////////////////////////////
 #gradient {
-	.horizontal(@startColor: #555, @endColor: #333) {
-		background-color: @endColor;
-		background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
-		background-image: -ms-linear-gradient(left, @startColor, @endColor); // IE10
-		background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
-		background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
-		background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
-		background-image: linear-gradient(left, @startColor, @endColor); // Le standard
-		background-repeat: repeat-x;
-		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); // IE9 and down
-	}
-	.vertical(@startColor: #555, @endColor: #333) {
-		background-color: mix(@startColor, @endColor, 60%);
-		background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
-		background-image: -ms-linear-gradient(top, @startColor, @endColor); // IE10
-		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
-		background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
-		background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
-		background-image: linear-gradient(top, @startColor, @endColor); // The standard
-		background-repeat: repeat-x;
-		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down
-	}
-	.directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
-		background-color: @endColor;
-		background-repeat: repeat-x;
-		background-image: -moz-linear-gradient(@deg, @startColor, @endColor); // FF 3.6+
-		background-image: -ms-linear-gradient(@deg, @startColor, @endColor); // IE10
-		background-image: -webkit-linear-gradient(@deg, @startColor, @endColor); // Safari 5.1+, Chrome 10+
-		background-image: -o-linear-gradient(@deg, @startColor, @endColor); // Opera 11.10
-		background-image: linear-gradient(@deg, @startColor, @endColor); // The standard
-	}
-	.vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
-		background-color: mix(@midColor, @endColor, 80%);
-		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
-		background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
-		background-image: -moz-linear-gradient(top, @startColor, @midColor @colorStop, @endColor);
-		background-image: -ms-linear-gradient(@startColor, @midColor @colorStop, @endColor);
-		background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
-		background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
-		background-repeat: no-repeat;
-		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down, gets no color-stop at all for proper fallback
-	}
-	.radial(@innerColor: #555, @outerColor: #333)  {
-		background-color: @outerColor;
-		background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
-		background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
-		background-image: -moz-radial-gradient(circle, @innerColor, @outerColor);
-		background-image: -ms-radial-gradient(circle, @innerColor, @outerColor);
-		background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
-		background-repeat: no-repeat;
-	}
-	.striped(@color, @angle: -45deg) {
-		background-color: @color;
-		background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255,255,255,.15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255,255,255,.15)), color-stop(.75, rgba(255,255,255,.15)), color-stop(.75, transparent), to(transparent));
-		background-image: -webkit-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
-		background-image: -moz-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
-		background-image: -ms-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
-		background-image: -o-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
-		background-image: linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
-	}
+    .horizontal(@startColor: #555, @endColor: #333) {
+        background-color: @endColor;
+        background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
+        background-image: -ms-linear-gradient(left, @startColor, @endColor); // IE10
+        background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+        background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+        background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
+        background-image: linear-gradient(left, @startColor, @endColor); // Le standard
+        background-repeat: repeat-x;
+        filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); // IE9 and down
+    }
+    .vertical(@startColor: #555, @endColor: #333) {
+        background-color: mix(@startColor, @endColor, 60%);
+        background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+        background-image: -ms-linear-gradient(top, @startColor, @endColor); // IE10
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+        background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+        background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+        background-image: linear-gradient(top, @startColor, @endColor); // The standard
+        background-repeat: repeat-x;
+        filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down
+    }
+    .directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
+        background-color: @endColor;
+        background-repeat: repeat-x;
+        background-image: -moz-linear-gradient(@deg, @startColor, @endColor); // FF 3.6+
+        background-image: -ms-linear-gradient(@deg, @startColor, @endColor); // IE10
+        background-image: -webkit-linear-gradient(@deg, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+        background-image: -o-linear-gradient(@deg, @startColor, @endColor); // Opera 11.10
+        background-image: linear-gradient(@deg, @startColor, @endColor); // The standard
+    }
+    .vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+        background-color: mix(@midColor, @endColor, 80%);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+        background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+        background-image: -moz-linear-gradient(top, @startColor, @midColor @colorStop, @endColor);
+        background-image: -ms-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+        background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+        background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
+        background-repeat: no-repeat;
+        filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down, gets no color-stop at all for proper fallback
+    }
+    .radial(@innerColor: #555, @outerColor: #333)  {
+        background-color: @outerColor;
+        background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
+        background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
+        background-image: -moz-radial-gradient(circle, @innerColor, @outerColor);
+        background-image: -ms-radial-gradient(circle, @innerColor, @outerColor);
+        background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
+        background-repeat: no-repeat;
+    }
+    .striped(@color, @angle: -45deg) {
+        background-color: @color;
+        background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255,255,255,.15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255,255,255,.15)), color-stop(.75, rgba(255,255,255,.15)), color-stop(.75, transparent), to(transparent));
+        background-image: -webkit-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+        background-image: -moz-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+        background-image: -ms-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+        background-image: -o-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+        background-image: linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    }
 }
 
 /* Reset filters for IE */
 .reset-filter() {
-	filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
 }
 
 // Animations /////////////////////////////////////////////////////////////////
 #animation {
-	.add(@name){
-		#animation > .type(@name);
-	}
-	.use(@animation){
-		-webkit-animation: @animation;
-		-moz-animation: @animation;
-		-ms-animation: @animation;
-		-o-animation: @animation; /* NYI */
-		animation: @animation;
-	}
-	.type(bounce) {
-		@-webkit-keyframes bounce {
-			0%   { -webkit-transform: translateY(0px); }
-			25%  { -webkit-transform: translateY(-1px); }
-			50%  { -webkit-transform: translateY(-2px); }
-			75%  { -webkit-transform: translateY(-1px); }
-			100% { -webkit-transform: translateY(0px); }
-		}
+    .add(@name){
+        #animation > .type(@name);
+    }
+    .use(@animation){
+        -webkit-animation: @animation;
+        -moz-animation: @animation;
+        -ms-animation: @animation;
+        -o-animation: @animation; /* NYI */
+        animation: @animation;
+    }
+    .type(bounce) {
+        @-webkit-keyframes bounce {
+            0%   { -webkit-transform: translateY(0px); }
+            25%  { -webkit-transform: translateY(-1px); }
+            50%  { -webkit-transform: translateY(-2px); }
+            75%  { -webkit-transform: translateY(-1px); }
+            100% { -webkit-transform: translateY(0px); }
+        }
 
-		@-moz-keyframes bounce {
-			0%   { -moz-transform: translateY(0px); }
-			25%  { -moz-transform: translateY(-1px); }
-			50%  { -moz-transform: translateY(-2px); }
-			75%  { -moz-transform: translateY(-1px); }
-			100% { -moz-transform: translateY(0px); }
-		}
+        @-moz-keyframes bounce {
+            0%   { -moz-transform: translateY(0px); }
+            25%  { -moz-transform: translateY(-1px); }
+            50%  { -moz-transform: translateY(-2px); }
+            75%  { -moz-transform: translateY(-1px); }
+            100% { -moz-transform: translateY(0px); }
+        }
 
-		@keyframes bounce {
-			0%   { transform: translateY(0px); }
-			25%  { transform: translateY(-1px); }
-			50%  { transform: translateY(-2px); }
-			75%  { transform: translateY(-1px); }
-			100% { transform: translateY(0px); }
-		}
-	}
+        @keyframes bounce {
+            0%   { transform: translateY(0px); }
+            25%  { transform: translateY(-1px); }
+            50%  { transform: translateY(-2px); }
+            75%  { transform: translateY(-1px); }
+            100% { transform: translateY(0px); }
+        }
+    }
 }
 
 // Grid ///////////////////////////////////////////////////////////////////////
 #grid {
-	.setColumn(@columnCount, @totalColumns, @pageWidth, @gutterWidth){
-		width: ((100% / @totalColumns)  * @columnCount);
-		position: relative;
-	}
-	.create(@totalColumns: 12, @pageWidth: 960px, @gutterWidth: 10px){
-		*, *:after, *:before {
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-		}
-		.container {
-			width: 100%;
-			max-width: @pageWidth;
-			margin: 0 auto;
-			position: relative;
-		}
-		.row {
-			width: 100%;
-			position: relative;
-			.clearfix();
-		}
-		.col, .cols {
-			float:left;
+    .setColumn(@columnCount, @totalColumns, @pageWidth, @gutter){
+        width: ((100% / @totalColumns)  * @columnCount);
+        position: relative;
+    }
+    .create(@totalColumns: 12, @pageWidth: 960px, @gutter: 10px){
+        *, *:after, *:before {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+            max-width: @pageWidth;
+            margin: 0 auto;
+            position: relative;
 
-			&.pad {
-				padding: @gutterWidth;
-			}
-		}
-		.one    { #grid > .setColumn(1, @totalColumns, @pageWidth, @gutterWidth) }
-		.two    { #grid > .setColumn(2, @totalColumns, @pageWidth, @gutterWidth) }
-		.three  { #grid > .setColumn(3, @totalColumns, @pageWidth, @gutterWidth) }
-		.four   { #grid > .setColumn(4, @totalColumns, @pageWidth, @gutterWidth) }
-		.five   { #grid > .setColumn(5, @totalColumns, @pageWidth, @gutterWidth) }
-		.six    { #grid > .setColumn(6, @totalColumns, @pageWidth, @gutterWidth) }
-		.seven  { #grid > .setColumn(7, @totalColumns, @pageWidth, @gutterWidth) }
-		.eight  { #grid > .setColumn(8, @totalColumns, @pageWidth, @gutterWidth) }
-		.nine   { #grid > .setColumn(9, @totalColumns, @pageWidth, @gutterWidth) }
-		.ten    { #grid > .setColumn(10,@totalColumns, @pageWidth, @gutterWidth) }
-		.eleven { #grid > .setColumn(11,@totalColumns, @pageWidth, @gutterWidth) }
-		.twelve { #grid > .setColumn(12,@totalColumns, @pageWidth, @gutterWidth) }
-	}
+            &.pad {
+                padding: @gutter;
+            }
+        }
+        .row {
+            width: 100%;
+            position: relative;
+            .clearfix();
+        }
+        .col, .cols {
+            float:left;
+
+            &.pad {
+                padding: @gutter;
+            }
+        }
+        .one    { #grid > .setColumn(1, @totalColumns, @pageWidth, @gutter) }
+        .two    { #grid > .setColumn(2, @totalColumns, @pageWidth, @gutter) }
+        .three  { #grid > .setColumn(3, @totalColumns, @pageWidth, @gutter) }
+        .four   { #grid > .setColumn(4, @totalColumns, @pageWidth, @gutter) }
+        .five   { #grid > .setColumn(5, @totalColumns, @pageWidth, @gutter) }
+        .six    { #grid > .setColumn(6, @totalColumns, @pageWidth, @gutter) }
+        .seven  { #grid > .setColumn(7, @totalColumns, @pageWidth, @gutter) }
+        .eight  { #grid > .setColumn(8, @totalColumns, @pageWidth, @gutter) }
+        .nine   { #grid > .setColumn(9, @totalColumns, @pageWidth, @gutter) }
+        .ten    { #grid > .setColumn(10,@totalColumns, @pageWidth, @gutter) }
+        .eleven { #grid > .setColumn(11,@totalColumns, @pageWidth, @gutter) }
+        .twelve { #grid > .setColumn(12,@totalColumns, @pageWidth, @gutter) }
+    }
 }
 
 // Fonts //////////////////////////////////////////////////////////////////////
@@ -482,169 +486,169 @@ Add an alphatransparency value to any background or border color (via Elyse Holl
 //  + size (relative): #font > #size > .use(<target size - e.g. 48>, <context - e.g. 16>);
 //  + size (fixed): #font > #size > .use(<size in px - e.g. 48px>);
 #font {
-	#stack {
-		.use(icon){
-			font-family: Glyphs;
-		}
-		.use(regular){
-			font-family: ProximaNova, Helvetica, Arial, sans-serif;
-		}
-		.use(condensed){
-			font-family: ProximaNovaCond, Helvetica, Arial, sans-serif;
-		}
-		.use(sans){
-			font-family: sans-serif;
-		}
-	}
-	#size {
-		.use(@size){
-			font-size: @size;
-		}
-		.use(@size, @containerWidth) when(isnumber(@size)) and (isnumber(@containerWidth)){
-			font-size: @size / @containerWidth + 0em;
-		}
-	}
-	#weight {
-		.use(normal){
-			font-weight: normal;
-		}
-		.use(regular){
-			font-weight: 400;
-		}
-		.use(semibold){
-			font-weight: 600;
-		}
-		.use(bold){
-			font-weight: 700;
-		}
-		.use(extrabold){
-			font-weight: 800;
-		}
-		.use(black){
-			font-weight: 900;
-		}
-	}
+    #stack {
+        .use(icon){
+            font-family: Glyphs;
+        }
+        .use(regular){
+            font-family: ProximaNova, Helvetica, Arial, sans-serif;
+        }
+        .use(condensed){
+            font-family: ProximaNovaCond, Helvetica, Arial, sans-serif;
+        }
+        .use(sans){
+            font-family: sans-serif;
+        }
+    }
+    #size {
+        .use(@size){
+            font-size: @size;
+        }
+        .use(@size, @containerWidth) when(isnumber(@size)) and (isnumber(@containerWidth)){
+            font-size: @size / @containerWidth + 0em;
+        }
+    }
+    #weight {
+        .use(normal){
+            font-weight: normal;
+        }
+        .use(regular){
+            font-weight: 400;
+        }
+        .use(semibold){
+            font-weight: 600;
+        }
+        .use(bold){
+            font-weight: 700;
+        }
+        .use(extrabold){
+            font-weight: 800;
+        }
+        .use(black){
+            font-weight: 900;
+        }
+    }
 
-	// Shorthand methods to setup font styles
-	.use(icon, @size: @baseFontSize){
-		#font > #stack > .use(icon);
-		#font > #size > .use(@size);
-		#font > #weight > .use(normal);
-	}
-	.use(@name, @weight: regular, @size: @baseFontSize){
-		#font > #stack > .use(@name);
-		#font > #size > .use(@size);
-		#font > #weight > .use(@weight);
-	}
+    // Shorthand methods to setup font styles
+    .use(icon, @size: @baseFontSize){
+        #font > #stack > .use(icon);
+        #font > #size > .use(@size);
+        #font > #weight > .use(normal);
+    }
+    .use(@name, @weight: regular, @size: @baseFontSize){
+        #font > #stack > .use(@name);
+        #font > #size > .use(@size);
+        #font > #weight > .use(@weight);
+    }
 
-	// Adds custom font stacks via @font-face declarations
-	.add(@name, @weight){
-		#font > .type(@name, @weight);
-	}
+    // Adds custom font stacks via @font-face declarations
+    .add(@name, @weight){
+        #font > .type(@name, @weight);
+    }
 
-	// Glyphs Icon Assignments - to update, see fonts/glyphs-instructions.txt
-	// Icon                Hex Entitiy         CSS Content
-	// ========================================================
-	// Pencil              !                   content: '!';
-	// Trash               &#x22;              content: '\22';
-	// Link                #                   content: '#';
-	// Star                $                   content: '$';
-	// Out                 %                   content: '%';
-	// Magnifier           &                   content: '&';
-	// Add                 &#x27;              content: '\27';
-	// Left                (                   content: '(';
-	// Right               )                   content: ')';
-	// Brush               *                   content: '*';
-	// Picture             +                   content: '+';
-	// Pacman              ,                   content: ',';
-	// Basket              -                   content: '-';
-	// Comments            .                   content: '.';
-	// Thumbs Up           /                   content: '/';
-	// Thumbs Down         0                   content: '0';
-	// Zoom In             1                   content: '1';
-	// Zoom Out            2                   content: '2';
-	.type(icon, normal) {
-		@font-face {
-			font-family:'Glyphs';
-			src:url('./fonts/glyphs-webfont.eot');
-			src:url('./fonts/glyphs-webfont.eot?#iefix') format('embedded-opentype'),
-				url('./fonts/glyphs-webfont.woff') format('woff'),
-				url('./fonts/glyphs-webfont.ttf') format('truetype'),
-				url('./fonts/glyphs-webfont.svg#IcoMoonRegular') format('svg');
-		}
-	}
+    // Glyphs Icon Assignments - to update, see fonts/glyphs-instructions.txt
+    // Icon                Hex Entitiy         CSS Content
+    // ========================================================
+    // Pencil              !                   content: '!';
+    // Trash               &#x22;              content: '\22';
+    // Link                #                   content: '#';
+    // Star                $                   content: '$';
+    // Out                 %                   content: '%';
+    // Magnifier           &                   content: '&';
+    // Add                 &#x27;              content: '\27';
+    // Left                (                   content: '(';
+    // Right               )                   content: ')';
+    // Brush               *                   content: '*';
+    // Picture             +                   content: '+';
+    // Pacman              ,                   content: ',';
+    // Basket              -                   content: '-';
+    // Comments            .                   content: '.';
+    // Thumbs Up           /                   content: '/';
+    // Thumbs Down         0                   content: '0';
+    // Zoom In             1                   content: '1';
+    // Zoom Out            2                   content: '2';
+    .type(icon, normal) {
+        @font-face {
+            font-family:'Glyphs';
+            src:url('./fonts/glyphs-webfont.eot');
+            src:url('./fonts/glyphs-webfont.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/glyphs-webfont.woff') format('woff'),
+            url('./fonts/glyphs-webfont.ttf') format('truetype'),
+            url('./fonts/glyphs-webfont.svg#IcoMoonRegular') format('svg');
+        }
+    }
 
-	// Proxima Nova
-	.type(ProximaNova, regular){
-		@font-face {
-			font-family:'ProximaNova';
-			font-weight:400;
-			src:url('./fonts/1BAA77_1_0.eot');
-			src:url('./fonts/1BAA77_1_0.eot?#iefix') format('embedded-opentype'),
-				url('./fonts/1BAA77_1_0.woff') format('woff'),
-				url('./fonts/1BAA77_1_0.ttf') format('truetype');
-		}
-	}
-	.type(ProximaNova, bold){
-		@font-face {
-			font-family:'ProximaNova';
-			font-weight:700;
-			src:url('./fonts/1BAA77_6_0.eot');
-			src:url('./fonts/1BAA77_6_0.eot?#iefix') format('embedded-opentype'),
-				url('./fonts/1BAA77_6_0.woff') format('woff'),
-				url('./fonts/1BAA77_6_0.ttf') format('truetype');
-		}
-	}
-	.type(ProximaNova, black){
-		@font-face {
-			font-family:'ProximaNova';
-			font-weight:900;
-			src:url('./fonts/1BAA77_4_0.eot');
-			src:url('./fonts/1BAA77_4_0.eot?#iefix') format('embedded-opentype'),
-				url('./fonts/1BAA77_4_0.woff') format('woff'),
-				url('./fonts/1BAA77_4_0.ttf') format('truetype');
-		}
-	}
+    // Proxima Nova
+    .type(ProximaNova, regular){
+        @font-face {
+            font-family:'ProximaNova';
+            font-weight:400;
+            src:url('./fonts/1BAA77_1_0.eot');
+            src:url('./fonts/1BAA77_1_0.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/1BAA77_1_0.woff') format('woff'),
+            url('./fonts/1BAA77_1_0.ttf') format('truetype');
+        }
+    }
+    .type(ProximaNova, bold){
+        @font-face {
+            font-family:'ProximaNova';
+            font-weight:700;
+            src:url('./fonts/1BAA77_6_0.eot');
+            src:url('./fonts/1BAA77_6_0.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/1BAA77_6_0.woff') format('woff'),
+            url('./fonts/1BAA77_6_0.ttf') format('truetype');
+        }
+    }
+    .type(ProximaNova, black){
+        @font-face {
+            font-family:'ProximaNova';
+            font-weight:900;
+            src:url('./fonts/1BAA77_4_0.eot');
+            src:url('./fonts/1BAA77_4_0.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/1BAA77_4_0.woff') format('woff'),
+            url('./fonts/1BAA77_4_0.ttf') format('truetype');
+        }
+    }
 
-	// Proxima Nova Condensed
-	.type(ProximaNovaCondensed, regular){
-		@font-face {
-			font-family:'ProximaNovaCond';
-			font-weight:400;
-			src:url('./fonts/1BAA77_5_0.eot');
-			src:url('./fonts/1BAA77_5_0.eot?#iefix') format('embedded-opentype'),
-				url('./fonts/1BAA77_5_0.woff') format('woff'),
-				url('./fonts/1BAA77_5_0.ttf') format('truetype');
-		}
-	}
-	.type(ProximaNovaCondensed, semibold){
-		@font-face {
-			font-family:'ProximaNovaCond';
-			font-weight:600;
-			src:url('./fonts/1BAA77_0_0.eot');
-			src:url('./fonts/1BAA77_0_0.eot?#iefix') format('embedded-opentype'),
-				url('./fonts/1BAA77_0_0.woff') format('woff'),
-				url('./fonts/1BAA77_0_0.ttf') format('truetype');
-		}
-	}
-	.type(ProximaNovaCondensed, bold){
-		@font-face {
-			font-family:'ProximaNovaCond';
-			font-weight:700;
-			src:url('./fonts/1BAA77_7_0.eot');
-			src:url('./fonts/1BAA77_7_0.eot?#iefix') format('embedded-opentype'),
-				url('./fonts/1BAA77_7_0.woff') format('woff'),
-				url('./fonts/1BAA77_7_0.ttf') format('truetype');
-		}
-	}
-	.type(ProximaNovaCondensed, extrabold){
-		@font-face {
-			font-family:'ProximaNovaCond';
-			font-weight:800;
-			src:url('./fonts/1BAA77_3_0.eot');
-			src:url('./fonts/1BAA77_3_0.eot?#iefix') format('embedded-opentype'),
-				url('./fonts/1BAA77_3_0.woff') format('woff'),
-				url('./fonts/1BAA77_3_0.ttf') format('truetype');
-		}
-	}
+    // Proxima Nova Condensed
+    .type(ProximaNovaCondensed, regular){
+        @font-face {
+            font-family:'ProximaNovaCond';
+            font-weight:400;
+            src:url('./fonts/1BAA77_5_0.eot');
+            src:url('./fonts/1BAA77_5_0.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/1BAA77_5_0.woff') format('woff'),
+            url('./fonts/1BAA77_5_0.ttf') format('truetype');
+        }
+    }
+    .type(ProximaNovaCondensed, semibold){
+        @font-face {
+            font-family:'ProximaNovaCond';
+            font-weight:600;
+            src:url('./fonts/1BAA77_0_0.eot');
+            src:url('./fonts/1BAA77_0_0.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/1BAA77_0_0.woff') format('woff'),
+            url('./fonts/1BAA77_0_0.ttf') format('truetype');
+        }
+    }
+    .type(ProximaNovaCondensed, bold){
+        @font-face {
+            font-family:'ProximaNovaCond';
+            font-weight:700;
+            src:url('./fonts/1BAA77_7_0.eot');
+            src:url('./fonts/1BAA77_7_0.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/1BAA77_7_0.woff') format('woff'),
+            url('./fonts/1BAA77_7_0.ttf') format('truetype');
+        }
+    }
+    .type(ProximaNovaCondensed, extrabold){
+        @font-face {
+            font-family:'ProximaNovaCond';
+            font-weight:800;
+            src:url('./fonts/1BAA77_3_0.eot');
+            src:url('./fonts/1BAA77_3_0.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/1BAA77_3_0.woff') format('woff'),
+            url('./fonts/1BAA77_3_0.ttf') format('truetype');
+        }
+    }
 }
