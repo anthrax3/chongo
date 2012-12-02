@@ -12,16 +12,22 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 h1 {
-    #font > .use(sans, bold, @baseFontSize * 4);
+    #font > .use(sans, semibold, @h1FontSize);
 }
 h2 {
-    #font > .use(sans, bold, @baseFontSize * 3);
+    #font > .use(sans, semibold, @h2FontSize);
 }
 h3 {
-    #font > .use(sans, bold, @baseFontSize * 2);
+    #font > .use(sans, semibold, @h3FontSize);
 }
 h4 {
-    #font > .use(sans, bold, @baseFontSize);
+    #font > .use(sans, semibold, @h4FontSize);
+}
+h5 {
+    #font > .use(sans, semibold, @h5FontSize);
+}
+h6 {
+    #font > .use(sans, bold, @h6FontSize);
 }
 p {
     #font > .use(condensed, regular);

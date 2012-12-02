@@ -497,7 +497,7 @@ Add an alphatransparency value to any background or border color (via Elyse Holl
 #font {
     #stack {
         .use(icon){
-            font-family: Glyphs;
+            font-family: FontAwesome;
         }
         .use(regular){
             font-family: ProximaNova, Helvetica, Arial, sans-serif;
@@ -555,35 +555,14 @@ Add an alphatransparency value to any background or border color (via Elyse Holl
         #font > .type(@name, @weight);
     }
 
-    // Glyphs Icon Assignments - to update, see fonts/glyphs-instructions.txt
-    // Icon                Hex Entitiy         CSS Content
-    // ========================================================
-    // Pencil              !                   content: '!';
-    // Trash               &#x22;              content: '\22';
-    // Link                #                   content: '#';
-    // Star                $                   content: '$';
-    // Out                 %                   content: '%';
-    // Magnifier           &                   content: '&';
-    // Add                 &#x27;              content: '\27';
-    // Left                (                   content: '(';
-    // Right               )                   content: ')';
-    // Brush               *                   content: '*';
-    // Picture             +                   content: '+';
-    // Pacman              ,                   content: ',';
-    // Basket              -                   content: '-';
-    // Comments            .                   content: '.';
-    // Thumbs Up           /                   content: '/';
-    // Thumbs Down         0                   content: '0';
-    // Zoom In             1                   content: '1';
-    // Zoom Out            2                   content: '2';
     .type(icon, normal) {
         @font-face {
-            font-family:'Glyphs';
-            src:url('./fonts/glyphs-webfont.eot');
-            src:url('./fonts/glyphs-webfont.eot?#iefix') format('embedded-opentype'),
-            url('./fonts/glyphs-webfont.woff') format('woff'),
-            url('./fonts/glyphs-webfont.ttf') format('truetype'),
-            url('./fonts/glyphs-webfont.svg#IcoMoonRegular') format('svg');
+            font-family: 'FontAwesome';
+            src: url('./fonts/fontawesome-webfont.eot');
+            src: url('./fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/fontawesome-webfont.woff') format('woff'),
+            url('./fonts/fontawesome-webfont.ttf') format('truetype'),
+            url('./fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
         }
     }
 
