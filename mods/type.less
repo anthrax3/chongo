@@ -1,6 +1,6 @@
 // Type ///////////////////////////////////////////////////////////////////////
 body {
-    #font > .use(sans, normal);
+    #font > .use(sans, normal, 62.5%); // 62.5% so 1em === 10px
 }
 h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizelegibility;
@@ -24,7 +24,7 @@ h4 {
     #font > .use(sans, bold, @baseFontSize);
 }
 p {
-    #font > .use(condensed, regular, 14px);
+    #font > .use(condensed, regular);
     line-height: @baseLineHeight * 1.5;
 }
 a {
