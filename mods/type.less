@@ -1,6 +1,9 @@
 // Type ///////////////////////////////////////////////////////////////////////
+html {
+    #font > #size > .use(62.5%); // 62.5% so 1em === 10px
+}
 body {
-    #font > .use(sans, normal, 62.5%); // 62.5% so 1em === 10px
+    #font > .use(regular, regular, 1.4rem);
 }
 h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizelegibility;
@@ -12,29 +15,28 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 h1 {
-    #font > .use(sans, semibold, @h1FontSize);
+    #font > .use(sans, regular, @h1FontSize);
 }
 h2 {
-    #font > .use(sans, semibold, @h2FontSize);
+    #font > .use(sans, regular, @h2FontSize);
 }
 h3 {
-    #font > .use(sans, semibold, @h3FontSize);
+    #font > .use(sans, regular, @h3FontSize);
 }
 h4 {
-    #font > .use(sans, semibold, @h4FontSize);
+    #font > .use(sans, regular, @h4FontSize);
 }
 h5 {
     #font > .use(sans, semibold, @h5FontSize);
 }
 h6 {
-    #font > .use(sans, bold, @h6FontSize);
+    #font > .use(regular, extrabold, @h6FontSize);
 }
 p {
-    #font > .use(condensed, regular);
     line-height: @baseLineHeight * 1.5;
 }
 a {
-    #font > #weight > .use(bold);
+    #font > #weight > .use(semibold);
     color: @link;
     text-decoration: none;
 }
@@ -43,4 +45,7 @@ a:hover {
 }
 a:active {
     color: @linkActive;
+}
+em {
+    #font > #stack > .use(italic);
 }
