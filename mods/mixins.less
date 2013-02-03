@@ -450,6 +450,23 @@ Add an alphatransparency value to any background or border color (via Elyse Holl
             &.pad {
                 padding: @gutter;
             }
+
+            &.debug {
+                .col,
+                .cols {
+                    margin-bottom: 10px;
+                    background:#eee;
+                    background:rgba(0,0,0,0.1);
+                    border: 1px solid rgba(0,0,0,0.1);
+
+                    .col,
+                    .cols {
+                        margin-bottom: 0;
+                        background: #ddd;
+                        background:rgba(0,0,0,0.1);
+                    }
+                }
+            }
         }
         .row {
             width: 100%;
